@@ -176,6 +176,17 @@ $(document).ready(function(){
 		}
 	});
 
+	$(document).on('click','.vacancy-btn',function(){
+		var eh = $(this).parents('li').find('.descr-wrap').outerHeight();
+
+		$(this).parents('li').toggleClass('active');
+		if ( $(this).parents('li').hasClass('active') ){
+			$(this).parents('li').find('.descr').animate({'height':eh},300);
+		} else {
+			$(this).parents('li').find('.descr').animate({'height':0},300);
+		}
+	});
+
 	$(window).resize(function(){
 
 		$('.footer-nav').find('.item.active').each(function(){
@@ -186,6 +197,12 @@ $(document).ready(function(){
 			} else {
 				$(this).find('.item-content').css('height',eh);
 			}
+		});
+
+		$('.b-vacancy').find('li.active').each(function(){
+			var eh = $(this).find('.descr-wrap').outerHeight();
+
+			$(this).find('.descr').css('height',eh);
 		});
 
 	});
