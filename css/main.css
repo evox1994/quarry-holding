@@ -1652,22 +1652,21 @@
 	overflow: hidden;
 	position: relative;
 }
-.b-contacts-resume > li .flex {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.b-contacts-resume > li a {
+	display: block;
 	font-size: 20px;
 }
-.b-contacts-resume > li .flex img {
-	display: block;
+.b-contacts-resume > li a img {
+	display: inline-block;
+	vertical-align: middle;
 	max-width: 50px;
 	max-height: 50px;
+	margin-right: 25px;
 }
-.b-contacts-resume > li .flex span {
-	display: block;
-	width: calc(100% - 80px);
+.b-contacts-resume > li a span {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: calc(100% - 80px);
 	white-space: nowrap;
 }
 
@@ -2750,15 +2749,16 @@
 		width: calc(50% - 10px);
 		margin: 0 0 20px;
 	}
-	.b-contacts-resume > li .flex {
+	.b-contacts-resume > li a {
 		font-size: 16px;
 	}
-	.b-contacts-resume > li .flex img {
+	.b-contacts-resume > li a img {
 		max-width: 40px;
 		max-height: 40px;
+		margin-right: 15px;
 	}
-	.b-contacts-resume > li .flex span {
-		width: calc(100% - 60px);
+	.b-contacts-resume > li a span {
+		max-width: calc(100% - 60px);
 	}
 
 	.b-vacancy > li {
